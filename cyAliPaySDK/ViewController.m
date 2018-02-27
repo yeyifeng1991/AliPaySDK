@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-#import <AlipaySDK/AlipaySDK.h>
+#import <ShareSDK/ShareSDK.h>
 
+#import <AlipaySDK/AlipaySDK.h>
 #import "APAuthInfo.h"
 #import "APOrderInfo.h"
 #import "APRSASigner.h" //加签
@@ -23,7 +24,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 - (IBAction)AliPay:(id)sender {
+    [self doAPPay];
     NSLog(@"支付宝支付");
+}
+- (IBAction)AliPayAuth:(id)sender {
+    NSLog(@"支付宝授权");
+    [self doAPAuth];
 }
 - (IBAction)AliPayLogin:(id)sender {
     NSLog(@"阿里支付登录");
@@ -32,9 +38,58 @@
     NSLog(@"新浪微博支付");
     
 }
+#pragma mark - 微信登录
 - (IBAction)WeChatLogin:(id)sender {
-    NSLog(@"微信支付");
+    NSLog(@"微信登录");
+    // 判断手机是否安装软件
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"Sinaweibo://"]]) {
+        
+        //新浪微博
+        
+    }
     
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"Whatapp://"]]) {
+        
+        //微信
+        
+    }
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"weixin://"]]) {
+        
+        //微信
+        
+    }
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"Facebook://"]]) {
+        
+        //facebook
+        
+    }
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"Twitter://"]]) {
+        
+        //推特
+        
+    }
+    //例如QQ的登录
+    [ShareSDK getUserInfo:SSDKPlatformTypeWechat
+           onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
+     {
+         if (state == SSDKResponseStateSuccess)
+         {
+             
+             NSLog(@"uid=%@",user.uid);
+             NSLog(@"%@",user.credential);
+             NSLog(@"token=%@",user.credential.token);
+             NSLog(@"nickname=%@",user.nickname);
+         }
+         
+         else
+         {
+             NSLog(@"%@",error);
+         }
+         
+     }];
 }
 - (IBAction)TencentLogin:(id)sender {
     NSLog(@"腾讯支付");
@@ -42,9 +97,7 @@
 - (IBAction)AliPayGoPay:(id)sender {
     NSLog(@"支付宝支付");
 }
-- (IBAction)AliPayAuth:(id)sender {
-    NSLog(@"支付宝授权");
-}
+
 #pragma mark -
 #pragma mark   ==============点击订单模拟支付行为==============
 //
@@ -137,7 +190,7 @@
     } else {
         signedString = [signer signString:orderInfo withRSA2:NO];
     }
-    
+    NSLog(@"加签之后的string = %@",signedString);
     // NOTE: 如果加签成功，则继续执行支付
     if (signedString != nil) {
         //应用注册scheme,在AliSDKDemo-Info.plist定义URL types
@@ -149,7 +202,8 @@
         
         // NOTE: 调用支付结果开始支付
         [[AlipaySDK defaultService] payOrder:orderString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
-            NSLog(@"reslut = %@",resultDic);
+            NSLog(@"ViewController中 reslut = %@",resultDic);
+            
         }];
     }
 }
@@ -168,14 +222,14 @@
     /*=======================需要填写商户app申请的===================================*/
     /*============================================================================*/
     NSString *pid = @"";
-    NSString *appID = @"";
+    NSString *appID = @"2017122001008529";
     
     // 如下私钥，rsa2PrivateKey 或者 rsaPrivateKey 只需要填入一个
     // 如果商户两个都设置了，优先使用 rsa2PrivateKey
     // rsa2PrivateKey 可以保证商户交易在更加安全的环境下进行，建议使用 rsa2PrivateKey
     // 获取 rsa2PrivateKey，建议使用支付宝提供的公私钥生成工具生成，
     // 工具地址：https://doc.open.alipay.com/docs/doc.htm?treeId=291&articleId=106097&docType=1
-    NSString *rsa2PrivateKey = @"";
+    NSString *rsa2PrivateKey = @"MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCCwE8Y4qTVrmu6tXSEFXWipiWZxTZevn9TJBdcVzHwX2YAZ9jyZDcTqEp99hp0zZhMfhk940XMofIxj0/Ph+RMMN5bxqX/8XH96Qb1ZBK7pv8E8UouHwSyg4mTS2G/hpgUY2h2ZxwOwL9Kg55Pbfhpt09EiGoCxD33AoAv8Nv1yGaS0/IuAaao8uuegACHcOjDssImYO5YQU+pehWJBF+lHGRmlid+czKAVQe3y5iucDcvnpsxlvys8Kztpf2UL4nTj26i0hh9AXG4Dq/lB9q3G5+xS//ACzmGQD6tseZKPBEfHkhn0zCOQIElBg1FTCuKvn4ciIF0WQX1SmIFHnDDAgMBAAECggEAKGPpy0EwNEYmR04IiUjrxuvWT7MpQYlNYcyTXtYcuiluJA/wZ6hnjy38nP6qW4yrUG3ftEuB413fqEmiGPTcpGCwP9+UpgTa9tnGaYWZd9h1jPxQswCn/dE+bX7q2jRkxF+VBIaDl1cZgJY6EEVjaJzU4tHVFbezgJuIJ8ca28iz410GElLSmz3HNi3jOqarZIEhL57G7PxMzMxcD66nu0evkUZj+M4D0++Zh73+kQa8jI4wb4zkiOqH2HZnOLPoMMxm59CwC6d8rYjYAQvKhxcZthRpWSmjPTl4lTHnzzWIlxcvRda8VxJ1iZfmFWnfkYsQ6a93AuOY77DuqnWVgQKBgQDGtu7GkY8GdbXFbsGmzwp6bPE5ujDlXl2YaFkJXiTmEXU8p8zdRMm52uupwMfXgGAIJWLVbQRvCzIEs5cf5TzU9JEYcyEIBUw40v/pKBvxocURdJVbCJ8Yka1l5zZbkfYSZCZHjwPtBuJ0ixef0Xjy/ls7oY+IKk7mhAXiE1D/wQKBgQCocbPphgEJJ1XANE6jda+VFM4hnwI9gcIbngfVwU14KU1qOJWbNvGHFmPfiO61kkwNDxRyRowaaX+f1J2vBYpCZhLWjnwFGGhfsIx2NyOUYBaF+kZJTD4iKIxzZ19k0i3LfAl2Kvb3lbJiYo2OuvrGZVTm2C/72gjCZWu4aZ/RgwKBgEgnoro9nnaVBWTkW7LrWP2tU0ZH4ntW8ZtmwHXTVoin7C8TKyNpV+qBoLLqCmao+bXbhXDD/ikoIohsgcKWJamaCJmdLHBSJCQ6Eayi4Mqzl/BHqff9QG/WbeUjuKw1aumwremr95v4tP/mhbSFhmqNi6kyeADUhAPWCqDVrMLBAoGAEk1wgBJIcIcuoRjN5qL19hvxneOaKba8saWFMmuzkDfkqoMFdn0M12HObk6BqYcA7nZSAWy68m++J07B52+Rq09OArQus5sIVEVprbqmCgw6xkoAcxxur+V6BVwZGGpiAXczy/w1I4fHfzs4KGcWspH2HLMm25XAV+cPQlVvwSMCgYAVbDY5Qm+VVDtlovDoFZ6y1A9Em59zlCFYO8+Y+K9PgnXS68XufdpxYQwNKtrnRKQS6jo8pC+9Ol2STga1s+8uhoMLXhP1pHyv4qAg7ry0x13QxGbSvOecZnZnEutWEpVk/wg0fl4jolhS0CssJ8SHavDjlKtXn2IkZG89S0848w==";;
     NSString *rsaPrivateKey = @"";
     /*============================================================================*/
     /*============================================================================*/
