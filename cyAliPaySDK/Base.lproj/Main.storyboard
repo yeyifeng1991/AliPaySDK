@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,94 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCz-MQ-7Er">
+                                <rect key="frame" x="125" y="53" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="J1b-Zr-IXH"/>
+                                </constraints>
+                                <state key="normal" title="支付宝支付"/>
+                                <connections>
+                                    <action selector="AliPay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3BJ-xr-FEK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXS-O5-1hd">
+                                <rect key="frame" x="125" y="104" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bvz-Dj-OeS"/>
+                                </constraints>
+                                <state key="normal" title="支付宝授权"/>
+                                <connections>
+                                    <action selector="AliPayAuth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEA-xE-VcP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J20-fZ-qWJ">
+                                <rect key="frame" x="133" y="155" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XFn-WD-W6Z"/>
+                                </constraints>
+                                <state key="normal" title="微信登录"/>
+                                <connections>
+                                    <action selector="WeChatLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z0w-hZ-0Xc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1y-qS-l7k">
+                                <rect key="frame" x="134" y="218" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nlC-e1-rzn"/>
+                                </constraints>
+                                <state key="normal" title="腾讯登录"/>
+                                <connections>
+                                    <action selector="TencentLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YB2-rg-GqZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2M-ps-tEy">
+                                <rect key="frame" x="119" y="276" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Utl-36-r91"/>
+                                </constraints>
+                                <state key="normal" title="新浪微博登录"/>
+                                <connections>
+                                    <action selector="SinaWeiboLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wID-hg-LTF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkL-TR-o4D">
+                                <rect key="frame" x="125" y="325" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hra-P1-9Q2"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="NVs-xq-6WY"/>
+                                </constraints>
+                                <state key="normal" title="支付宝登录"/>
+                                <connections>
+                                    <action selector="AliPayLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDr-7p-fVu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="s1y-qS-l7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="073-qr-0Tu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s1y-qS-l7k" secondAttribute="trailing" constant="179" id="2da-K4-dMY"/>
+                            <constraint firstItem="J20-fZ-qWJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="3Lq-St-DGO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J2M-ps-tEy" secondAttribute="trailing" constant="164" id="6Yz-dv-GDv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GCz-MQ-7Er" secondAttribute="trailing" constant="173" id="7Mn-S1-4NN"/>
+                            <constraint firstItem="oXS-O5-1hd" firstAttribute="top" secondItem="GCz-MQ-7Er" secondAttribute="bottom" constant="21" id="7Ox-Zy-Dfg"/>
+                            <constraint firstItem="GCz-MQ-7Er" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="Afc-Ot-2de"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oXS-O5-1hd" secondAttribute="trailing" constant="173" id="M20-Kw-rYq"/>
+                            <constraint firstItem="wkL-TR-o4D" firstAttribute="top" secondItem="J2M-ps-tEy" secondAttribute="bottom" constant="19" id="PUf-ed-prQ"/>
+                            <constraint firstItem="oXS-O5-1hd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="VlB-Va-YWm"/>
+                            <constraint firstItem="J2M-ps-tEy" firstAttribute="top" secondItem="s1y-qS-l7k" secondAttribute="bottom" constant="28" id="bb6-s5-ZEN"/>
+                            <constraint firstItem="J20-fZ-qWJ" firstAttribute="top" secondItem="oXS-O5-1hd" secondAttribute="bottom" constant="21" id="cT9-ln-Ftb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J20-fZ-qWJ" secondAttribute="trailing" constant="180" id="eLM-Jm-fO7"/>
+                            <constraint firstItem="wkL-TR-o4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="fZe-ot-DgC"/>
+                            <constraint firstItem="s1y-qS-l7k" firstAttribute="top" secondItem="J20-fZ-qWJ" secondAttribute="bottom" constant="33" id="i14-k7-ay1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wkL-TR-o4D" secondAttribute="trailing" constant="173" id="pOI-Xf-nM2"/>
+                            <constraint firstItem="J2M-ps-tEy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="vAE-cT-LCO"/>
+                            <constraint firstItem="GCz-MQ-7Er" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="vTy-ye-3r2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

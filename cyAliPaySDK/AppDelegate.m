@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <AlipaySDK/AlipaySDK.h>
 @interface AppDelegate ()
 
 @end
