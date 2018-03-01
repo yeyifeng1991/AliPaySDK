@@ -292,6 +292,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7D2FBA8204504730082EFA3 /* CFNetwork.framework in Frameworks */,
+				D7D2FB9E204504460082EFA3 /* QuartzCore.framework in Frameworks */,
+				D7D2FB98204504230082EFA3 /* libz.tbd in Frameworks */,
+				D7D2FB9A2045042B0082EFA3 /* SystemConfiguration.framework in Frameworks */,
 				D7D2FC962045395A0082EFA3 /* ImageIO.framework in Frameworks */,
 				D7D2FC942045394A0082EFA3 /* libsqlite3.tbd in Frameworks */,
 				D7D2FC922045393A0082EFA3 /* libstdc++.tbd in Frameworks */,
@@ -319,7 +323,6 @@
 				D7D2FC7C204538A80082EFA3 /* DTShareKit.framework in Frameworks */,
 				D7D2FC88204538A80082EFA3 /* libWeChatSDK.a in Frameworks */,
 				D7D2FC5D204538A80082EFA3 /* ShareSDK.framework in Frameworks */,
-				D7D2FBA8204504730082EFA3 /* CFNetwork.framework in Frameworks */,
 				D7D2FBA62045046C0082EFA3 /* Foundation.framework in Frameworks */,
 				D7D2FC6E204538A80082EFA3 /* MailConnector.framework in Frameworks */,
 				D7D2FC73204538A80082EFA3 /* SinaWeiboConnector.framework in Frameworks */,
@@ -333,15 +336,12 @@
 				D7D2FBA0204504510082EFA3 /* CoreText.framework in Frameworks */,
 				D7D2FC80204538A80082EFA3 /* KakaoOpenSDK.framework in Frameworks */,
 				D7D2FC65204538A80082EFA3 /* DingTalkConnector.framework in Frameworks */,
-				D7D2FB9E204504460082EFA3 /* QuartzCore.framework in Frameworks */,
 				D7D2FC6F204538A80082EFA3 /* MeiPaiConnector.framework in Frameworks */,
 				D7D2FC63204538A80082EFA3 /* AliPayConnector.framework in Frameworks */,
 				D7D2FB9C2045043C0082EFA3 /* CoreTelephony.framework in Frameworks */,
-				D7D2FB9A2045042B0082EFA3 /* SystemConfiguration.framework in Frameworks */,
 				D7D2FC79204538A80082EFA3 /* YouTubeConnector.framework in Frameworks */,
 				D7D2FC67204538A80082EFA3 /* EvernoteConnector.framework in Frameworks */,
 				D7D2FC6C204538A80082EFA3 /* KakaoConnector.framework in Frameworks */,
-				D7D2FB98204504230082EFA3 /* libz.tbd in Frameworks */,
 				D7D2FC77204538A80082EFA3 /* WhatsAppConnector.framework in Frameworks */,
 				D7D2FC5C204538A80082EFA3 /* MOBFoundation.framework in Frameworks */,
 				D7D2FB962045041D0082EFA3 /* libc++.tbd in Frameworks */,
@@ -1102,8 +1102,8 @@
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/Required",
 				);
 				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/cyAliPaySDK\"",
-					/Users/yeyifeng/Desktop/cyAliPaySDK/Alipay,
+					"\"$(SRCROOT)/Alipay\"",
+					"\"$(SRCROOT)/SDK\"",
 				);
 				INFOPLIST_FILE = cyAliPaySDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1115,6 +1115,7 @@
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = www.mumuwu.cyAliPaySDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1145,8 +1146,8 @@
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/Required",
 				);
 				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/cyAliPaySDK\"",
-					/Users/yeyifeng/Desktop/cyAliPaySDK/Alipay,
+					"\"$(SRCROOT)/Alipay\"",
+					"\"$(SRCROOT)/SDK\"",
 				);
 				INFOPLIST_FILE = cyAliPaySDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1158,6 +1159,7 @@
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = www.mumuwu.cyAliPaySDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

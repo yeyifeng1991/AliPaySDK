@@ -23,7 +23,7 @@
 
 
 #import <AlipaySDK/AlipaySDK.h>
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -32,6 +32,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+#pragma mark - 微信支付之注册ID
+//    [WXApi registerApp:@"wxa8ede867b1239cbb" ];
+    [self configurationShareSDKParameter];
+    
+//
     return YES;
 }
 #pragma mark - 配置ShareSDK的参数
@@ -54,8 +59,6 @@
                                         @(SSDKPlatformTypeWechat),
                                         @(SSDKPlatformTypeQQ),
                                         @(SSDKPlatformTypeRenren),
-                                        @(SSDKPlatformTypeFacebook),
-                                        @(SSDKPlatformTypeTwitter),
                                         @(SSDKPlatformTypeGooglePlus),
                                         ]
                              onImport:^(SSDKPlatformType platformType)
@@ -92,34 +95,75 @@
                                        appSecret:@"d2e529843c8a658fd25c6c9760184167"];
                  break;
              case SSDKPlatformTypeQQ:
-                 [appInfo SSDKSetupQQByAppId:@"100371282"
-                                      appKey:@"aed9b0303e3ed1e27bae87c33761161d"
+                 [appInfo SSDKSetupQQByAppId:@"1106660353"
+                                      appKey:@"Ry1uRUKbVhWqhDOw"
                                     authType:SSDKAuthTypeBoth];
                  break;
              default:
                  break;
+                 
          }
      }];
 }
 #pragma Mark - 支付宝的回调
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+    if ([sourceApplication isEqualToString:@"com.tencent.xin"]) {
+        //微信支付回调
+        return [WXApi handleOpenURL:url delegate:self];
+    }else
+    {
+        //如果极简开发包不可用，会跳转支付宝钱包进行支付，需要将支付宝钱包的支付结果回传给开发包
+        if ([url.host isEqualToString:@"safepay"]) {
+            [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+                //【由于在跳转支付宝客户端支付的过程中，商户app在后台很可能被系统kill了，所以pay接口的callback就会失效，请商户对standbyCallback返回的回调结果进行处理,就是在这个方法里面处理跟callback一样的逻辑】
+                NSLog(@"result = %@",resultDic);
+            }];
+        }
+        if ([url.host isEqualToString:@"platformapi"]){//支付宝钱包快登授权返回authCode
+            
+            [[AlipaySDK defaultService] processAuthResult:url standbyCallback:^(NSDictionary *resultDic) {
+                //【由于在跳转支付宝客户端支付的过程中，商户app在后台很可能被系统kill了，所以pay接口的callback就会失效，请商户对standbyCallback返回的回调结果进行处理,就是在这个方法里面处理跟callback一样的逻辑】
+                NSLog(@"result = %@",resultDic);
+            }];
+        }
+        return YES;
+    }
     
-    //如果极简开发包不可用，会跳转支付宝钱包进行支付，需要将支付宝钱包的支付结果回传给开发包
-    if ([url.host isEqualToString:@"safepay"]) {
-        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
-            //【由于在跳转支付宝客户端支付的过程中，商户app在后台很可能被系统kill了，所以pay接口的callback就会失效，请商户对standbyCallback返回的回调结果进行处理,就是在这个方法里面处理跟callback一样的逻辑】
-            NSLog(@"result = %@",resultDic);
-        }];
-    }
-    if ([url.host isEqualToString:@"platformapi"]){//支付宝钱包快登授权返回authCode
-        
-        [[AlipaySDK defaultService] processAuthResult:url standbyCallback:^(NSDictionary *resultDic) {
-            //【由于在跳转支付宝客户端支付的过程中，商户app在后台很可能被系统kill了，所以pay接口的callback就会失效，请商户对standbyCallback返回的回调结果进行处理,就是在这个方法里面处理跟callback一样的逻辑】
-            NSLog(@"result = %@",resultDic);
-        }];
-    }
-    return YES;
+}
+//9.0后的方法
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+    //这里判断是否发起的请求为微信支付，如果是的话，用WXApi的方法调起微信客户端的支付页面（://pay 之前的那串字符串就是你的APPID，）
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+
+
+//微信SDK自带的方法，处理从微信客户端完成操作后返回程序之后的回调方法,显示支付结果的
+-(void) onResp:(BaseResp*)resp
+{
+    /*
+     //启动微信支付的response
+     NSString *payResoult = [NSString stringWithFormat:@"errcode:%d", resp.errCode];
+     if([resp isKindOfClass:[PayResp class]]){
+     //支付返回结果，实际支付结果需要去微信服务器端查询
+     switch (resp.errCode) {
+     case 0:
+     payResoult = @"支付结果：成功！";
+     break;
+     case -1:
+     payResoult = @"支付结果：失败！";
+     break;
+     case -2:
+     payResoult = @"用户已退出支付";
+     break;
+     default:
+     payResoult = [NSString stringWithFormat:@"支付结果：失败！retcode = %d, retstr = %@", resp.errCode,resp.errStr];
+     break;
+     }
+     }
+     }
+     */
+ 
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

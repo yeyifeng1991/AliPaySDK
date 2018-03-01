@@ -20,6 +20,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCz-MQ-7Er">
                                 <rect key="frame" x="125" y="53" width="77" height="30"/>
+                                <color key="backgroundColor" red="0.28170901134204407" green="1" blue="0.54961206164311982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="J1b-Zr-IXH"/>
                                 </constraints>
@@ -40,6 +41,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J20-fZ-qWJ">
                                 <rect key="frame" x="133" y="155" width="62" height="30"/>
+                                <color key="backgroundColor" red="0.13157391244093641" green="1" blue="0.30010349749678367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XFn-WD-W6Z"/>
                                 </constraints>
@@ -50,6 +52,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1y-qS-l7k">
                                 <rect key="frame" x="134" y="218" width="62" height="30"/>
+                                <color key="backgroundColor" red="0.28001623933825659" green="1" blue="0.19799680717998924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nlC-e1-rzn"/>
                                 </constraints>
@@ -79,6 +82,17 @@
                                     <action selector="AliPayLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDr-7p-fVu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdZ-yo-IQk">
+                                <rect key="frame" x="125" y="379" width="86" height="30"/>
+                                <color key="backgroundColor" red="0.1220034845270942" green="1" blue="0.24136387937827009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JUw-Jb-A0z"/>
+                                </constraints>
+                                <state key="normal" title="微信支付"/>
+                                <connections>
+                                    <action selector="WeChatPay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ufT-hn-5rQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -89,6 +103,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GCz-MQ-7Er" secondAttribute="trailing" constant="173" id="7Mn-S1-4NN"/>
                             <constraint firstItem="oXS-O5-1hd" firstAttribute="top" secondItem="GCz-MQ-7Er" secondAttribute="bottom" constant="21" id="7Ox-Zy-Dfg"/>
                             <constraint firstItem="GCz-MQ-7Er" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="Afc-Ot-2de"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JdZ-yo-IQk" secondAttribute="trailing" constant="164" id="IhL-nU-Ztj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oXS-O5-1hd" secondAttribute="trailing" constant="173" id="M20-Kw-rYq"/>
                             <constraint firstItem="wkL-TR-o4D" firstAttribute="top" secondItem="J2M-ps-tEy" secondAttribute="bottom" constant="19" id="PUf-ed-prQ"/>
                             <constraint firstItem="oXS-O5-1hd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="VlB-Va-YWm"/>
@@ -96,16 +111,19 @@
                             <constraint firstItem="J20-fZ-qWJ" firstAttribute="top" secondItem="oXS-O5-1hd" secondAttribute="bottom" constant="21" id="cT9-ln-Ftb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J20-fZ-qWJ" secondAttribute="trailing" constant="180" id="eLM-Jm-fO7"/>
                             <constraint firstItem="wkL-TR-o4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="fZe-ot-DgC"/>
+                            <constraint firstItem="JdZ-yo-IQk" firstAttribute="top" secondItem="wkL-TR-o4D" secondAttribute="bottom" constant="24" id="g1N-xF-UXv"/>
                             <constraint firstItem="s1y-qS-l7k" firstAttribute="top" secondItem="J20-fZ-qWJ" secondAttribute="bottom" constant="33" id="i14-k7-ay1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wkL-TR-o4D" secondAttribute="trailing" constant="173" id="pOI-Xf-nM2"/>
                             <constraint firstItem="J2M-ps-tEy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="vAE-cT-LCO"/>
                             <constraint firstItem="GCz-MQ-7Er" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="vTy-ye-3r2"/>
+                            <constraint firstItem="JdZ-yo-IQk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="vzg-1o-UdX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="111.99400299850076"/>
         </scene>
     </scenes>
 </document>
