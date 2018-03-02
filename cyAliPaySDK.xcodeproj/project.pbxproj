@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59F8EC9F22E817D1CEDF0D1D /* libPods-cyAliPaySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C70B09C206CCDD17EF663062 /* libPods-cyAliPaySDK.a */; };
+		D7CB3DDB2049286A0049B20A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CB3DCB2049286A0049B20A /* libWeChatSDK.a */; };
+		D7CB3DDC2049286A0049B20A /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D7CB3DCC2049286A0049B20A /* README.txt */; };
+		D7CB3DDD2049286A0049B20A /* JKApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CB3DD22049286A0049B20A /* JKApiManager.m */; };
+		D7CB3DDE2049286A0049B20A /* JKWechatPayHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CB3DD52049286A0049B20A /* JKWechatPayHandler.m */; };
+		D7CB3DDF2049286A0049B20A /* JKWechatSignAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CB3DD72049286A0049B20A /* JKWechatSignAdaptor.m */; };
+		D7CB3DE02049286A0049B20A /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CB3DDA2049286A0049B20A /* XMLDictionary.m */; };
 		D7D2FB60204503ED0082EFA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D2FB5F204503ED0082EFA3 /* AppDelegate.m */; };
 		D7D2FB63204503ED0082EFA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D2FB62204503ED0082EFA3 /* ViewController.m */; };
 		D7D2FB66204503ED0082EFA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D2FB64204503ED0082EFA3 /* Main.storyboard */; };
@@ -78,8 +85,6 @@
 		D7D2FC85204538A80082EFA3 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D2FC49204538A80082EFA3 /* RennSDK.framework */; };
 		D7D2FC86204538A80082EFA3 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D2FC4B204538A80082EFA3 /* libWeiboSDK.a */; };
 		D7D2FC87204538A80082EFA3 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7D2FC4D204538A80082EFA3 /* WeiboSDK.bundle */; };
-		D7D2FC88204538A80082EFA3 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D2FC50204538A80082EFA3 /* libWeChatSDK.a */; };
-		D7D2FC89204538A80082EFA3 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D7D2FC51204538A80082EFA3 /* README.txt */; };
 		D7D2FC8A204538A80082EFA3 /* libYixinSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D2FC56204538A80082EFA3 /* libYixinSDK.a */; };
 		D7D2FC8B204538A80082EFA3 /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7D2FC5A204538A80082EFA3 /* ShareSDK.bundle */; };
 		D7D2FC8C204538A80082EFA3 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D2FC5B204538A80082EFA3 /* ShareSDKConnector.framework */; };
@@ -108,6 +113,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25A857EA592DDA5A45DA0ABD /* Pods-cyAliPaySDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cyAliPaySDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-cyAliPaySDK/Pods-cyAliPaySDK.release.xcconfig"; sourceTree = "<group>"; };
+		8CD1A189FDE0C6033A1037DC /* Pods-cyAliPaySDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cyAliPaySDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cyAliPaySDK/Pods-cyAliPaySDK.debug.xcconfig"; sourceTree = "<group>"; };
+		C70B09C206CCDD17EF663062 /* libPods-cyAliPaySDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cyAliPaySDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7CB3DCB2049286A0049B20A /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		D7CB3DCC2049286A0049B20A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		D7CB3DCD2049286A0049B20A /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		D7CB3DCE2049286A0049B20A /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		D7CB3DCF2049286A0049B20A /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		D7CB3DD12049286A0049B20A /* JKApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKApiManager.h; sourceTree = "<group>"; };
+		D7CB3DD22049286A0049B20A /* JKApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKApiManager.m; sourceTree = "<group>"; };
+		D7CB3DD32049286A0049B20A /* JKWechatConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKWechatConfig.h; sourceTree = "<group>"; };
+		D7CB3DD42049286A0049B20A /* JKWechatPayHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKWechatPayHandler.h; sourceTree = "<group>"; };
+		D7CB3DD52049286A0049B20A /* JKWechatPayHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKWechatPayHandler.m; sourceTree = "<group>"; };
+		D7CB3DD62049286A0049B20A /* JKWechatSignAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKWechatSignAdaptor.h; sourceTree = "<group>"; };
+		D7CB3DD72049286A0049B20A /* JKWechatSignAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKWechatSignAdaptor.m; sourceTree = "<group>"; };
+		D7CB3DD92049286A0049B20A /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		D7CB3DDA2049286A0049B20A /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		D7CB3DE120492BDE0049B20A /* JKWeChatPayPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKWeChatPayPrefixHeader.pch; sourceTree = "<group>"; };
 		D7D2FB5B204503ED0082EFA3 /* cyAliPaySDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cyAliPaySDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D2FB5E204503ED0082EFA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7D2FB5F204503ED0082EFA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -270,11 +293,6 @@
 		D7D2FC4C204538A80082EFA3 /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
 		D7D2FC4D204538A80082EFA3 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		D7D2FC4E204538A80082EFA3 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
-		D7D2FC50204538A80082EFA3 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		D7D2FC51204538A80082EFA3 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		D7D2FC52204538A80082EFA3 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
-		D7D2FC53204538A80082EFA3 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		D7D2FC54204538A80082EFA3 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		D7D2FC56204538A80082EFA3 /* libYixinSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYixinSDK.a; sourceTree = "<group>"; };
 		D7D2FC57204538A80082EFA3 /* YXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApi.h; sourceTree = "<group>"; };
 		D7D2FC58204538A80082EFA3 /* YXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApiObject.h; sourceTree = "<group>"; };
@@ -310,6 +328,7 @@
 				D7D2FC72204538A80082EFA3 /* RenrenConnector.framework in Frameworks */,
 				D7D2FC83204538A80082EFA3 /* TencentOpenAPI.framework in Frameworks */,
 				D7D2FC74204538A80082EFA3 /* SMSConnector.framework in Frameworks */,
+				D7CB3DDB2049286A0049B20A /* libWeChatSDK.a in Frameworks */,
 				D7D2FC76204538A80082EFA3 /* WechatConnector.framework in Frameworks */,
 				D7D2FC66204538A80082EFA3 /* DropboxConnector.framework in Frameworks */,
 				D7D2FC82204538A80082EFA3 /* MPShareSDK.framework in Frameworks */,
@@ -321,7 +340,6 @@
 				D7D2FC7D204538A80082EFA3 /* Bolts.framework in Frameworks */,
 				D7D2FC86204538A80082EFA3 /* libWeiboSDK.a in Frameworks */,
 				D7D2FC7C204538A80082EFA3 /* DTShareKit.framework in Frameworks */,
-				D7D2FC88204538A80082EFA3 /* libWeChatSDK.a in Frameworks */,
 				D7D2FC5D204538A80082EFA3 /* ShareSDK.framework in Frameworks */,
 				D7D2FBA62045046C0082EFA3 /* Foundation.framework in Frameworks */,
 				D7D2FC6E204538A80082EFA3 /* MailConnector.framework in Frameworks */,
@@ -353,6 +371,7 @@
 				D7D2FC85204538A80082EFA3 /* RennSDK.framework in Frameworks */,
 				D7D2FC60204538A80082EFA3 /* ShareSDKExtension.framework in Frameworks */,
 				D7D2FC8A204538A80082EFA3 /* libYixinSDK.a in Frameworks */,
+				59F8EC9F22E817D1CEDF0D1D /* libPods-cyAliPaySDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,9 +392,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1509A02216C18E5DE6E616FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1A189FDE0C6033A1037DC /* Pods-cyAliPaySDK.debug.xcconfig */,
+				25A857EA592DDA5A45DA0ABD /* Pods-cyAliPaySDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7CB3DC92049286A0049B20A /* jkWeChatpay */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB3DCA2049286A0049B20A /* OpenSDK1.7.9 */,
+				D7CB3DD02049286A0049B20A /* WechatTool */,
+			);
+			name = jkWeChatpay;
+			path = cyAliPaySDK/jkWeChatpay;
+			sourceTree = "<group>";
+		};
+		D7CB3DCA2049286A0049B20A /* OpenSDK1.7.9 */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB3DCB2049286A0049B20A /* libWeChatSDK.a */,
+				D7CB3DCC2049286A0049B20A /* README.txt */,
+				D7CB3DCD2049286A0049B20A /* WechatAuthSDK.h */,
+				D7CB3DCE2049286A0049B20A /* WXApi.h */,
+				D7CB3DCF2049286A0049B20A /* WXApiObject.h */,
+			);
+			path = OpenSDK1.7.9;
+			sourceTree = "<group>";
+		};
+		D7CB3DD02049286A0049B20A /* WechatTool */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB3DD12049286A0049B20A /* JKApiManager.h */,
+				D7CB3DD22049286A0049B20A /* JKApiManager.m */,
+				D7CB3DD32049286A0049B20A /* JKWechatConfig.h */,
+				D7CB3DD42049286A0049B20A /* JKWechatPayHandler.h */,
+				D7CB3DD52049286A0049B20A /* JKWechatPayHandler.m */,
+				D7CB3DD62049286A0049B20A /* JKWechatSignAdaptor.h */,
+				D7CB3DD72049286A0049B20A /* JKWechatSignAdaptor.m */,
+				D7CB3DD82049286A0049B20A /* XMLDictionary */,
+			);
+			path = WechatTool;
+			sourceTree = "<group>";
+		};
+		D7CB3DD82049286A0049B20A /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB3DD92049286A0049B20A /* XMLDictionary.h */,
+				D7CB3DDA2049286A0049B20A /* XMLDictionary.m */,
+			);
+			path = XMLDictionary;
+			sourceTree = "<group>";
+		};
 		D7D2FB52204503ED0082EFA3 = {
 			isa = PBXGroup;
 			children = (
+				D7CB3DC92049286A0049B20A /* jkWeChatpay */,
 				D7D2FC0F204538A80082EFA3 /* SDK */,
 				D7D2FBB62045063B0082EFA3 /* Alipay */,
 				D7D2FB91204503FF0082EFA3 /* AlipaySDK.bundle */,
@@ -385,6 +460,7 @@
 				D7D2FB81204503ED0082EFA3 /* cyAliPaySDKUITests */,
 				D7D2FB5C204503ED0082EFA3 /* Products */,
 				D7D2FB942045041D0082EFA3 /* Frameworks */,
+				1509A02216C18E5DE6E616FD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -415,6 +491,7 @@
 				D7D2FB69204503ED0082EFA3 /* LaunchScreen.storyboard */,
 				D7D2FB6C204503ED0082EFA3 /* Info.plist */,
 				D7D2FB6D204503ED0082EFA3 /* main.m */,
+				D7CB3DE120492BDE0049B20A /* JKWeChatPayPrefixHeader.pch */,
 			);
 			path = cyAliPaySDK;
 			sourceTree = "<group>";
@@ -458,6 +535,7 @@
 				D7D2FB992045042B0082EFA3 /* SystemConfiguration.framework */,
 				D7D2FB97204504230082EFA3 /* libz.tbd */,
 				D7D2FB952045041D0082EFA3 /* libc++.tbd */,
+				C70B09C206CCDD17EF663062 /* libPods-cyAliPaySDK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -654,7 +732,6 @@
 				D7D2FC45204538A80082EFA3 /* QQSDK */,
 				D7D2FC47204538A80082EFA3 /* RenRenSDK */,
 				D7D2FC4A204538A80082EFA3 /* SinaWeiboSDK */,
-				D7D2FC4F204538A80082EFA3 /* WeChatSDK */,
 				D7D2FC55204538A80082EFA3 /* YiXinSDK */,
 			);
 			path = PlatformSDK;
@@ -741,18 +818,6 @@
 			path = SinaWeiboSDK;
 			sourceTree = "<group>";
 		};
-		D7D2FC4F204538A80082EFA3 /* WeChatSDK */ = {
-			isa = PBXGroup;
-			children = (
-				D7D2FC50204538A80082EFA3 /* libWeChatSDK.a */,
-				D7D2FC51204538A80082EFA3 /* README.txt */,
-				D7D2FC52204538A80082EFA3 /* WechatAuthSDK.h */,
-				D7D2FC53204538A80082EFA3 /* WXApi.h */,
-				D7D2FC54204538A80082EFA3 /* WXApiObject.h */,
-			);
-			path = WeChatSDK;
-			sourceTree = "<group>";
-		};
 		D7D2FC55204538A80082EFA3 /* YiXinSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -779,9 +844,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7D2FB87204503ED0082EFA3 /* Build configuration list for PBXNativeTarget "cyAliPaySDK" */;
 			buildPhases = (
+				2988C3AE53E54BE21161A74D /* [CP] Check Pods Manifest.lock */,
 				D7D2FB57204503ED0082EFA3 /* Sources */,
 				D7D2FB58204503ED0082EFA3 /* Frameworks */,
 				D7D2FB59204503ED0082EFA3 /* Resources */,
+				4F7A60041FC9B85A603C1F4C /* [CP] Embed Pods Frameworks */,
+				349B2070B0D90075D9731FD6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -880,10 +948,10 @@
 			files = (
 				D7D2FB6B204503ED0082EFA3 /* LaunchScreen.storyboard in Resources */,
 				D7D2FB68204503ED0082EFA3 /* Assets.xcassets in Resources */,
+				D7CB3DDC2049286A0049B20A /* README.txt in Resources */,
 				D7D2FB93204503FF0082EFA3 /* AlipaySDK.bundle in Resources */,
 				D7D2FC84204538A80082EFA3 /* RennSDK.bundle in Resources */,
 				D7D2FC8B204538A80082EFA3 /* ShareSDK.bundle in Resources */,
-				D7D2FC89204538A80082EFA3 /* README.txt in Resources */,
 				D7D2FC7B204538A80082EFA3 /* README.md in Resources */,
 				D7D2FC87204538A80082EFA3 /* WeiboSDK.bundle in Resources */,
 				D7D2FC5E204538A80082EFA3 /* ShareSDKConfigFile.bundle in Resources */,
@@ -908,15 +976,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2988C3AE53E54BE21161A74D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cyAliPaySDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		349B2070B0D90075D9731FD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cyAliPaySDK/Pods-cyAliPaySDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F7A60041FC9B85A603C1F4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cyAliPaySDK/Pods-cyAliPaySDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7D2FB57204503ED0082EFA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D7D2FB63204503ED0082EFA3 /* ViewController.m in Sources */,
+				D7CB3DDF2049286A0049B20A /* JKWechatSignAdaptor.m in Sources */,
 				D7D2FBB1204504D00082EFA3 /* openssl_wrapper.m in Sources */,
 				D7D2FB6E204503ED0082EFA3 /* main.m in Sources */,
+				D7CB3DDE2049286A0049B20A /* JKWechatPayHandler.m in Sources */,
+				D7CB3DDD2049286A0049B20A /* JKApiManager.m in Sources */,
 				D7D2FC0E20450B660082EFA3 /* APAuthInfo.m in Sources */,
+				D7CB3DE02049286A0049B20A /* XMLDictionary.m in Sources */,
 				D7D2FB60204503ED0082EFA3 /* AppDelegate.m in Sources */,
 				D7D2FBB0204504D00082EFA3 /* APRSASigner.m in Sources */,
 				D7D2FC0D20450B660082EFA3 /* APOrderInfo.m in Sources */,
@@ -1080,7 +1203,9 @@
 		};
 		D7D2FB88204503ED0082EFA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CD1A189FDE0C6033A1037DC /* Pods-cyAliPaySDK.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GRVNN93QGR;
@@ -1101,9 +1226,11 @@
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/RenRenSDK",
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/Required",
 				);
+				GCC_PREFIX_HEADER = /Users/yeyifeng/Desktop/cyAliPaySDK/cyAliPaySDK/JKWeChatPayPrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Alipay\"",
 					"\"$(SRCROOT)/SDK\"",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = cyAliPaySDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1112,10 +1239,14 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/APSocialSDK",
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
-					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
+					"$(PROJECT_DIR)/jkWeChatpay/OpenSDK1.7.9",
+					"$(PROJECT_DIR)/cyAliPaySDK/jkWeChatpay/OpenSDK1.7.9",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.mumuwu.cyAliPaySDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1124,7 +1255,9 @@
 		};
 		D7D2FB89204503ED0082EFA3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25A857EA592DDA5A45DA0ABD /* Pods-cyAliPaySDK.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GRVNN93QGR;
@@ -1145,9 +1278,11 @@
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/RenRenSDK",
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/Required",
 				);
+				GCC_PREFIX_HEADER = /Users/yeyifeng/Desktop/cyAliPaySDK/cyAliPaySDK/JKWeChatPayPrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Alipay\"",
 					"\"$(SRCROOT)/SDK\"",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = cyAliPaySDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1156,10 +1291,14 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/APSocialSDK",
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
-					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
 					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
+					"$(PROJECT_DIR)/jkWeChatpay/OpenSDK1.7.9",
+					"$(PROJECT_DIR)/cyAliPaySDK/jkWeChatpay/OpenSDK1.7.9",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.mumuwu.cyAliPaySDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

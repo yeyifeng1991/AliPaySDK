@@ -14,7 +14,7 @@
 #import "APOrderInfo.h"
 #import "APRSASigner.h" //加签
 
-#import "WXApi.h"
+//#import "WXApi.h"
 @interface ViewController ()
 
 @end
@@ -25,24 +25,20 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 }
+#pragma mark - 支付宝支付
 - (IBAction)AliPay:(id)sender {
     [self doAPPay];
     NSLog(@"支付宝支付");
 }
+#pragma mark - 支付宝登录
 - (IBAction)AliPayAuth:(id)sender {
     NSLog(@"支付宝授权");
     [self doAPAuth];
 }
-- (IBAction)AliPayLogin:(id)sender {
-    NSLog(@"阿里支付登录");
-}
-- (IBAction)SinaWeiboLogin:(id)sender {
-    NSLog(@"新浪微博支付");
-    
-}
+
+
 #pragma mark - 微信登录
 - (IBAction)WeChatLogin:(id)sender {
-    NSLog(@"微信登录");
     
     //例如微信的登录
     [ShareSDK getUserInfo:SSDKPlatformTypeWechat
@@ -65,12 +61,8 @@
          
      }];
     
-    NSLog(@"--------");
-
-    
-    
-    
 }
+#pragma mark - 腾讯登录
 - (IBAction)TencentLogin:(id)sender {
     //例如QQ的登录
     [ShareSDK getUserInfo:SSDKPlatformTypeQQ
@@ -95,11 +87,12 @@
     
     NSLog(@"---QQ登录-----");
 }
-- (IBAction)AliPayGoPay:(id)sender {
-    NSLog(@"支付宝支付");
+#pragma mark - 新浪微博登录
+- (IBAction)SinaWeiboLogin:(id)sender {
+    NSLog(@"新浪微博支付");
+    
 }
 
-#pragma mark -
 #pragma mark   ==============点击订单模拟支付行为==============
 //
 // 选中商品调用支付宝极简支付
@@ -210,9 +203,6 @@
 }
 
 
-#pragma mark -
-#pragma mark   ==============点击模拟授权行为==============
-
 - (void)doAPAuth
 {
     // 重要说明
@@ -222,7 +212,7 @@
     /*============================================================================*/
     /*=======================需要填写商户app申请的===================================*/
     /*============================================================================*/
-    NSString *pid = @"";
+    NSString *pid = @"2088821847440442"; // 合作者身份
     NSString *appID = @"2017122001008529";
     
     // 如下私钥，rsa2PrivateKey 或者 rsaPrivateKey 只需要填入一个
@@ -302,14 +292,12 @@
                                                    }
                                                }
                                                NSLog(@"授权结果 authCode = %@", authCode?:@"");
+                                               
                                            }];
     }
 }
 
-
-#pragma mark -
 #pragma mark   ==============产生随机订单号==============
-
 - (NSString *)generateTradeNO
 {
     static int kNumber = 15;
@@ -326,37 +314,8 @@
 }
 #pragma mark - 微信支付
 - (IBAction)WeChatPay:(id)sender {
-    /*
-     NSLog(@"微信支付");
-     //需要创建这个支付对象
-     PayReq *req   = [[PayReq alloc] init];
-     //由用户微信号和AppID组成的唯一标识，用于校验微信用户
-     req.openID = @"";
-     
-     // 商家id，在注册的时候给的
-     req.partnerId = @"";
-     
-     // 预支付订单这个是后台跟微信服务器交互后，微信服务器传给你们服务器的，你们服务器再传给你
-     req.prepayId  = @"";
-     
-     // 根据财付通文档填写的数据和签名
-     //这个比较特殊，是固定的，只能是即req.package = Sign=WXPay
-     req.package   = @"";
-     
-     // 随机编码，为了防止重复的，在后台生成
-     req.nonceStr  = @"";
-     
-     // 这个是时间戳，也是在后台生成的，为了验证支付的
-     NSString * stamp = @"";
-     req.timeStamp = stamp.intValue;
-     
-     // 这个签名也是后台做的
-     req.sign = @"";
-     
-     //发送请求到微信，等待微信返回onResp
-     [WXApi sendReq:req];
-     */
-   
+    //发起微信支付
+    [JKWechatPayHandler jumpToWxPay];
     
     
 }

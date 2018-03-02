@@ -31,9 +31,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-#pragma mark - 微信支付之注册ID
-//    [WXApi registerApp:@"wxa8ede867b1239cbb" ];
+
+#pragma mark - 微信支付之注册AppID
+    [WXApi registerApp:MXWechatAPPID];
     [self configurationShareSDKParameter];
     
 //
@@ -91,8 +91,8 @@
                                             authType:SSDKAuthTypeBoth];
                  break;
              case SSDKPlatformTypeWechat:
-                 [appInfo SSDKSetupWeChatByAppId:@"wxa8ede867b1239cbb"
-                                       appSecret:@"d2e529843c8a658fd25c6c9760184167"];
+                 [appInfo SSDKSetupWeChatByAppId:@"wx0b12464246787cb1"
+                                       appSecret:@"42bbf9ebf99a402f564acda1b373114c"];
                  break;
              case SSDKPlatformTypeQQ:
                  [appInfo SSDKSetupQQByAppId:@"1106660353"
@@ -133,38 +133,35 @@
 }
 //9.0后的方法
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-    //这里判断是否发起的请求为微信支付，如果是的话，用WXApi的方法调起微信客户端的支付页面（://pay 之前的那串字符串就是你的APPID，）
-    return  [WXApi handleOpenURL:url delegate:self];
+    if ([url.host isEqualToString:@"safepay"]) {
+        
+        NSLog(@"这里做支付宝的操作");
+        
+    }else{
+        
+        
+        /*
+         *  app自己生成六个参数调用时
+         */
+        return  [WXApi handleOpenURL:url delegate:[JKApiManager sharedManager]];
+        
+        
+    }
+    return YES;
 }
 
 
-//微信SDK自带的方法，处理从微信客户端完成操作后返回程序之后的回调方法,显示支付结果的
--(void) onResp:(BaseResp*)resp
+#pragma mark - 微信支付回调
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
+    
     /*
-     //启动微信支付的response
-     NSString *payResoult = [NSString stringWithFormat:@"errcode:%d", resp.errCode];
-     if([resp isKindOfClass:[PayResp class]]){
-     //支付返回结果，实际支付结果需要去微信服务器端查询
-     switch (resp.errCode) {
-     case 0:
-     payResoult = @"支付结果：成功！";
-     break;
-     case -1:
-     payResoult = @"支付结果：失败！";
-     break;
-     case -2:
-     payResoult = @"用户已退出支付";
-     break;
-     default:
-     payResoult = [NSString stringWithFormat:@"支付结果：失败！retcode = %d, retstr = %@", resp.errCode,resp.errStr];
-     break;
-     }
-     }
-     }
+     *  app自己生成六个参数调用时
      */
- 
+    return  [WXApi handleOpenURL:url delegate:[JKApiManager sharedManager]];
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -22,28 +22,18 @@
                                 <rect key="frame" x="125" y="53" width="77" height="30"/>
                                 <color key="backgroundColor" red="0.28170901134204407" green="1" blue="0.54961206164311982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="J1b-Zr-IXH"/>
+                                    <constraint firstAttribute="height" constant="30" id="uVh-ht-ISw"/>
                                 </constraints>
                                 <state key="normal" title="支付宝支付"/>
                                 <connections>
                                     <action selector="AliPay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3BJ-xr-FEK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXS-O5-1hd">
-                                <rect key="frame" x="125" y="104" width="77" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Bvz-Dj-OeS"/>
-                                </constraints>
-                                <state key="normal" title="支付宝授权"/>
-                                <connections>
-                                    <action selector="AliPayAuth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEA-xE-VcP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J20-fZ-qWJ">
-                                <rect key="frame" x="133" y="155" width="62" height="30"/>
+                                <rect key="frame" x="125" y="156" width="77" height="30"/>
                                 <color key="backgroundColor" red="0.13157391244093641" green="1" blue="0.30010349749678367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="XFn-WD-W6Z"/>
+                                    <constraint firstAttribute="height" constant="30" id="4aW-jA-UEU"/>
                                 </constraints>
                                 <state key="normal" title="微信登录"/>
                                 <connections>
@@ -51,10 +41,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1y-qS-l7k">
-                                <rect key="frame" x="134" y="218" width="62" height="30"/>
+                                <rect key="frame" x="125" y="219" width="77" height="30"/>
                                 <color key="backgroundColor" red="0.28001623933825659" green="1" blue="0.19799680717998924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="nlC-e1-rzn"/>
+                                    <constraint firstAttribute="height" constant="30" id="7e5-ZN-4aB"/>
                                 </constraints>
                                 <state key="normal" title="腾讯登录"/>
                                 <connections>
@@ -62,31 +52,32 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2M-ps-tEy">
-                                <rect key="frame" x="119" y="276" width="92" height="30"/>
+                                <rect key="frame" x="125" y="277" width="77" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.25294603353194689" blue="0.28139630358033418" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Utl-36-r91"/>
+                                    <constraint firstAttribute="height" constant="30" id="YBA-GC-bP0"/>
                                 </constraints>
-                                <state key="normal" title="新浪微博登录"/>
+                                <state key="normal" title="新浪登录"/>
                                 <connections>
-                                    <action selector="SinaWeiboLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wID-hg-LTF"/>
+                                    <action selector="SinaWeiboLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5g-WW-by1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkL-TR-o4D">
-                                <rect key="frame" x="125" y="325" width="77" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXS-O5-1hd">
+                                <rect key="frame" x="125" y="105" width="77" height="30"/>
+                                <color key="backgroundColor" red="0.20024477713399247" green="1" blue="0.18431268981182847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Hra-P1-9Q2"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="NVs-xq-6WY"/>
+                                    <constraint firstAttribute="height" constant="30" id="4Ei-AW-bp4"/>
                                 </constraints>
                                 <state key="normal" title="支付宝登录"/>
                                 <connections>
-                                    <action selector="AliPayLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDr-7p-fVu"/>
+                                    <action selector="AliPayAuth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEA-xE-VcP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdZ-yo-IQk">
-                                <rect key="frame" x="125" y="379" width="86" height="30"/>
+                                <rect key="frame" x="125" y="327" width="77" height="30"/>
                                 <color key="backgroundColor" red="0.1220034845270942" green="1" blue="0.24136387937827009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="JUw-Jb-A0z"/>
+                                    <constraint firstAttribute="height" constant="30" id="Qhj-FI-dBS"/>
                                 </constraints>
                                 <state key="normal" title="微信支付"/>
                                 <connections>
@@ -96,27 +87,24 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="s1y-qS-l7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="073-qr-0Tu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s1y-qS-l7k" secondAttribute="trailing" constant="179" id="2da-K4-dMY"/>
-                            <constraint firstItem="J20-fZ-qWJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="3Lq-St-DGO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J2M-ps-tEy" secondAttribute="trailing" constant="164" id="6Yz-dv-GDv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GCz-MQ-7Er" secondAttribute="trailing" constant="173" id="7Mn-S1-4NN"/>
-                            <constraint firstItem="oXS-O5-1hd" firstAttribute="top" secondItem="GCz-MQ-7Er" secondAttribute="bottom" constant="21" id="7Ox-Zy-Dfg"/>
-                            <constraint firstItem="GCz-MQ-7Er" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="Afc-Ot-2de"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JdZ-yo-IQk" secondAttribute="trailing" constant="164" id="IhL-nU-Ztj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oXS-O5-1hd" secondAttribute="trailing" constant="173" id="M20-Kw-rYq"/>
-                            <constraint firstItem="wkL-TR-o4D" firstAttribute="top" secondItem="J2M-ps-tEy" secondAttribute="bottom" constant="19" id="PUf-ed-prQ"/>
-                            <constraint firstItem="oXS-O5-1hd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="VlB-Va-YWm"/>
-                            <constraint firstItem="J2M-ps-tEy" firstAttribute="top" secondItem="s1y-qS-l7k" secondAttribute="bottom" constant="28" id="bb6-s5-ZEN"/>
-                            <constraint firstItem="J20-fZ-qWJ" firstAttribute="top" secondItem="oXS-O5-1hd" secondAttribute="bottom" constant="21" id="cT9-ln-Ftb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J20-fZ-qWJ" secondAttribute="trailing" constant="180" id="eLM-Jm-fO7"/>
-                            <constraint firstItem="wkL-TR-o4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="fZe-ot-DgC"/>
-                            <constraint firstItem="JdZ-yo-IQk" firstAttribute="top" secondItem="wkL-TR-o4D" secondAttribute="bottom" constant="24" id="g1N-xF-UXv"/>
-                            <constraint firstItem="s1y-qS-l7k" firstAttribute="top" secondItem="J20-fZ-qWJ" secondAttribute="bottom" constant="33" id="i14-k7-ay1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wkL-TR-o4D" secondAttribute="trailing" constant="173" id="pOI-Xf-nM2"/>
-                            <constraint firstItem="J2M-ps-tEy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="vAE-cT-LCO"/>
-                            <constraint firstItem="GCz-MQ-7Er" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="vTy-ye-3r2"/>
-                            <constraint firstItem="JdZ-yo-IQk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="vzg-1o-UdX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oXS-O5-1hd" secondAttribute="trailing" constant="173" id="3UR-1n-oUs"/>
+                            <constraint firstItem="GCz-MQ-7Er" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="785-Z2-qJZ"/>
+                            <constraint firstItem="oXS-O5-1hd" firstAttribute="top" secondItem="GCz-MQ-7Er" secondAttribute="bottom" constant="22" id="KX4-BN-inm"/>
+                            <constraint firstItem="JdZ-yo-IQk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="MNJ-fg-gM5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s1y-qS-l7k" secondAttribute="trailing" constant="173" id="NdJ-du-G3D"/>
+                            <constraint firstItem="oXS-O5-1hd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="PMr-o0-Qo9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JdZ-yo-IQk" secondAttribute="trailing" constant="173" id="PtR-SH-cWi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J2M-ps-tEy" secondAttribute="trailing" constant="173" id="Qkv-fg-hTs"/>
+                            <constraint firstItem="GCz-MQ-7Er" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="TCG-Ss-hjw"/>
+                            <constraint firstItem="J20-fZ-qWJ" firstAttribute="top" secondItem="oXS-O5-1hd" secondAttribute="bottom" constant="21" id="VHl-Ri-3qb"/>
+                            <constraint firstItem="J2M-ps-tEy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="XJC-xb-VtY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GCz-MQ-7Er" secondAttribute="trailing" constant="173" id="Yp3-3T-JLd"/>
+                            <constraint firstItem="s1y-qS-l7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="c2f-AG-UYH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J20-fZ-qWJ" secondAttribute="trailing" constant="173" id="g1h-FA-CtN"/>
+                            <constraint firstItem="JdZ-yo-IQk" firstAttribute="top" secondItem="J2M-ps-tEy" secondAttribute="bottom" constant="20" id="juj-PS-nin"/>
+                            <constraint firstItem="s1y-qS-l7k" firstAttribute="top" secondItem="J20-fZ-qWJ" secondAttribute="bottom" constant="33" id="m9o-7K-BJc"/>
+                            <constraint firstItem="J2M-ps-tEy" firstAttribute="top" secondItem="s1y-qS-l7k" secondAttribute="bottom" constant="28" id="qWF-xI-iID"/>
+                            <constraint firstItem="J20-fZ-qWJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="rvd-UD-5T0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
